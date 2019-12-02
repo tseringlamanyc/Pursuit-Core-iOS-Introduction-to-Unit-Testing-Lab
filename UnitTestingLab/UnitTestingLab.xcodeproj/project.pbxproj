@@ -81,8 +81,9 @@
 			children = (
 				52051ED52395B59E00B1CB1B /* AppDelegate.swift */,
 				52051ED72395B59E00B1CB1B /* SceneDelegate.swift */,
-				52051ED92395B59E00B1CB1B /* ViewController.swift */,
 				52051EDB2395B59E00B1CB1B /* Main.storyboard */,
+				52051EF72395B81500B1CB1B /* New Group */,
+				52051ED92395B59E00B1CB1B /* ViewController.swift */,
 				52051EDE2395B5A000B1CB1B /* Assets.xcassets */,
 				52051EE02395B5A000B1CB1B /* LaunchScreen.storyboard */,
 				52051EE32395B5A000B1CB1B /* Info.plist */,
@@ -97,6 +98,13 @@
 				52051EEE2395B5A000B1CB1B /* Info.plist */,
 			);
 			path = UnitTestingLabTests;
+			sourceTree = "<group>";
+		};
+		52051EF72395B81500B1CB1B /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

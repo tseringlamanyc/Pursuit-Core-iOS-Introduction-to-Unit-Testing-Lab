@@ -18,6 +18,13 @@ class UnitTestingLabTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    
+    func testStarWarsJson() {
+        let filename = "starwars"
+        let ext = "json"
+        let data = Bundle.parseJSONData(filename: filename, ext: ext)
+        
+        XCTAssertNotNil(data)
+    }
 
 }

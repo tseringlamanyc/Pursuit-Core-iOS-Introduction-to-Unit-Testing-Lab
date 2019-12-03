@@ -22,6 +22,10 @@
 		52051F052395B99900B1CB1B /* DetailStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52051F042395B99900B1CB1B /* DetailStarViewController.swift */; };
 		52051F072395B9AB00B1CB1B /* TriviaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52051F062395B9AB00B1CB1B /* TriviaViewController.swift */; };
 		52051F092395B9B900B1CB1B /* DetailTriviaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52051F082395B9B900B1CB1B /* DetailTriviaViewController.swift */; };
+		52051F0B2395BB9B00B1CB1B /* Jokes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52051F0A2395BB9B00B1CB1B /* Jokes.swift */; };
+		52051F0D2395BBA900B1CB1B /* Starwars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52051F0C2395BBA900B1CB1B /* Starwars.swift */; };
+		52051F0F2395BBB900B1CB1B /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52051F0E2395BBB900B1CB1B /* Trivia.swift */; };
+		52442E2823960B00003B958F /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52442E2723960B00003B958F /* Bundle+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,10 @@
 		52051F042395B99900B1CB1B /* DetailStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStarViewController.swift; sourceTree = "<group>"; };
 		52051F062395B9AB00B1CB1B /* TriviaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaViewController.swift; sourceTree = "<group>"; };
 		52051F082395B9B900B1CB1B /* DetailTriviaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTriviaViewController.swift; sourceTree = "<group>"; };
+		52051F0A2395BB9B00B1CB1B /* Jokes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jokes.swift; sourceTree = "<group>"; };
+		52051F0C2395BBA900B1CB1B /* Starwars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starwars.swift; sourceTree = "<group>"; };
+		52051F0E2395BBB900B1CB1B /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
+		52442E2723960B00003B958F /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 			children = (
 				52051ED52395B59E00B1CB1B /* AppDelegate.swift */,
 				52051ED72395B59E00B1CB1B /* SceneDelegate.swift */,
+				52442E2723960B00003B958F /* Bundle+Extension.swift */,
 				52051EDB2395B59E00B1CB1B /* Main.storyboard */,
 				52051EF72395B81500B1CB1B /* Jokes */,
 				52051EF82395B86200B1CB1B /* Star Wars */,
@@ -121,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				52051EFA2395B8F700B1CB1B /* jokes.json */,
+				52051F0A2395BB9B00B1CB1B /* Jokes.swift */,
 				52051F022395B98B00B1CB1B /* DetailJokesViewController.swift */,
 				52051ED92395B59E00B1CB1B /* JokesViewController.swift */,
 			);
@@ -131,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				52051EFC2395B93700B1CB1B /* starwars.json */,
+				52051F0C2395BBA900B1CB1B /* Starwars.swift */,
 				52051F002395B97C00B1CB1B /* StarWarsViewController.swift */,
 				52051F042395B99900B1CB1B /* DetailStarViewController.swift */,
 			);
@@ -141,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				52051EFE2395B96000B1CB1B /* trivia.json */,
+				52051F0E2395BBB900B1CB1B /* Trivia.swift */,
 				52051F062395B9AB00B1CB1B /* TriviaViewController.swift */,
 				52051F082395B9B900B1CB1B /* DetailTriviaViewController.swift */,
 			);
@@ -253,11 +265,15 @@
 			files = (
 				52051F092395B9B900B1CB1B /* DetailTriviaViewController.swift in Sources */,
 				52051EDA2395B59E00B1CB1B /* JokesViewController.swift in Sources */,
+				52051F0D2395BBA900B1CB1B /* Starwars.swift in Sources */,
+				52051F0F2395BBB900B1CB1B /* Trivia.swift in Sources */,
 				52051F072395B9AB00B1CB1B /* TriviaViewController.swift in Sources */,
 				52051F032395B98B00B1CB1B /* DetailJokesViewController.swift in Sources */,
 				52051F012395B97C00B1CB1B /* StarWarsViewController.swift in Sources */,
+				52442E2823960B00003B958F /* Bundle+Extension.swift in Sources */,
 				52051ED62395B59E00B1CB1B /* AppDelegate.swift in Sources */,
 				52051ED82395B59E00B1CB1B /* SceneDelegate.swift in Sources */,
+				52051F0B2395BB9B00B1CB1B /* Jokes.swift in Sources */,
 				52051F052395B99900B1CB1B /* DetailStarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

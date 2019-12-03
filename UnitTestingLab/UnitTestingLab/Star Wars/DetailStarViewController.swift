@@ -9,11 +9,15 @@
 import UIKit
 
 class DetailStarViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var starwarsText: UITextView!
+    
+    var movie: Movies!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        starwarsText.text = movie.openingCrawl
     }
     
 

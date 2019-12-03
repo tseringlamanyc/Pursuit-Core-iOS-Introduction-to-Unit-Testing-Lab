@@ -17,7 +17,15 @@ struct Trivia: Decodable {
     
     let question: String
     let difficulty: String
+    let correctAnswer: String
+    
+    enum CodingKeys: String, CodingKey {
+        case question
+        case difficulty
+        case correctAnswer = "correct_answer"
+    }
 }
+
 
 extension TriviaData {
     static func getQuestions(data: Data) -> [Trivia] {

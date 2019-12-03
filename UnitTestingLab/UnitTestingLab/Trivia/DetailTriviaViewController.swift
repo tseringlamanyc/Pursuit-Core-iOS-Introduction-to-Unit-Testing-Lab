@@ -9,11 +9,12 @@
 import UIKit
 
 class DetailTriviaViewController: UIViewController {
+    
+    var answer: Trivia!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
    
 

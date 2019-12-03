@@ -54,5 +54,23 @@ class UnitTestingLabTests: XCTestCase {
         
         XCTAssertGreaterThan(trivia.count, 0)
     }
+    
+    func testJokesJson() {
+        let filename = "jokes"
+        let ext = "json"
+        let data = Bundle.parseJSONData(filename: filename, ext: ext)
+        
+        XCTAssertNotNil(data)
+    }
+    
+    func testJokesCount() {
+        let filename = "jokes"
+        let ext = "json"
+        let data = Bundle.parseJSONData(filename: filename, ext: ext)
+        
+        let jokes = Jokes.getJokes(data: data)
+        
+        XCTAssertGreaterThan(jokes.count, 0)
+    }
 
 }

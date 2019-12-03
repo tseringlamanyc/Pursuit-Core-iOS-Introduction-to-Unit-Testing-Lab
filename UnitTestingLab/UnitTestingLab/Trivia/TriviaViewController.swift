@@ -30,6 +30,12 @@ class TriviaViewController: UIViewController {
         trivia = TriviaData.getQuestions(data: Bundle.parseJSONData(filename: "trivia", ext: "json"))
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailTriviaViewController, let indexpath = tableView.indexPathForSelectedRow else {
+            fatalError()
+        }
+        detailVC.answer = trivia[indexpath.row]
+    }
 }
 
 extension TriviaViewController: UITableViewDataSource {

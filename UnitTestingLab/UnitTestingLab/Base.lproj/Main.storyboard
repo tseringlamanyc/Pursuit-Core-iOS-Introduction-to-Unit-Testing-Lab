@@ -59,6 +59,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="7pK-uI-xbB"/>
+                    <connections>
+                        <outlet property="tableView" destination="oQ3-3z-hR9" id="eZZ-7x-QCG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,10 +74,27 @@
                     <view key="view" contentMode="scaleToFill" id="4K1-ON-uKm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ny3-1Q-D3b">
+                                <rect key="frame" x="20" y="436" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ny3-1Q-D3b" firstAttribute="centerX" secondItem="4K1-ON-uKm" secondAttribute="centerX" id="79N-Md-qwY"/>
+                            <constraint firstItem="kcp-L0-rGC" firstAttribute="trailing" secondItem="ny3-1Q-D3b" secondAttribute="trailing" constant="20" id="U2X-zV-acs"/>
+                            <constraint firstItem="ny3-1Q-D3b" firstAttribute="centerY" secondItem="4K1-ON-uKm" secondAttribute="centerY" id="UrK-P7-gfI"/>
+                            <constraint firstItem="ny3-1Q-D3b" firstAttribute="leading" secondItem="kcp-L0-rGC" secondAttribute="leading" constant="20" id="jge-zB-E1r"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kcp-L0-rGC"/>
                     </view>
                     <navigationItem key="navigationItem" id="cJm-IU-KL7"/>
+                    <connections>
+                        <outlet property="punchLine" destination="ny3-1Q-D3b" id="6h7-3v-5sV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CyR-vz-c6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

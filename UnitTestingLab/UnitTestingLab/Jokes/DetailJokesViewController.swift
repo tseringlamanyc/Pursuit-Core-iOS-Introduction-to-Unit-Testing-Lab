@@ -9,11 +9,15 @@
 import UIKit
 
 class DetailJokesViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var punchLine: UILabel!
+    
+    var joke: Jokes!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        punchLine.text = joke.punchline
     }
     
 

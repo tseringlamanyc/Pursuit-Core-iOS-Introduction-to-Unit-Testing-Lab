@@ -12,6 +12,7 @@ struct Jokes: Codable {
     
     let setup: String
     let punchline: String
+    let id: Int
 }
 
 extension Jokes {

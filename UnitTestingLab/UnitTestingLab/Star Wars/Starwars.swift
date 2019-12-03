@@ -34,7 +34,8 @@ extension StarWars {
         var movies = [Movies]()
         
         do {
-            let movies = try JSONDecoder().decode(StarWars.self, from: data)
+            let moviesData = try JSONDecoder().decode(StarWars.self, from: data)
+            movies = moviesData.results
         } catch {
             fatalError()
         }

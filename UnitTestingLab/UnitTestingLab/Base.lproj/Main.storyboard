@@ -71,6 +71,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="NKd-ij-xie"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OXC-Rr-SUi">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -120,6 +121,9 @@
                         <viewLayoutGuide key="safeArea" id="cZ3-ao-f20"/>
                     </view>
                     <navigationItem key="navigationItem" id="IM4-73-gUO"/>
+                    <connections>
+                        <outlet property="tableView" destination="nFZ-Ry-Zv6" id="s20-dQ-ZbY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pkm-Td-Cbe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

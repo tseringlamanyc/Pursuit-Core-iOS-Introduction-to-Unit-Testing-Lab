@@ -9,11 +9,27 @@
 import UIKit
 
 class StarWarsViewController: UIViewController {
-
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var starwars = [StarWars]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    var data: Data!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//        tableView.dataSource = self
     }
  
 }
+
+//extension StarWarsViewController: UITableViewDataSource {
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        return
+//    }
+//}

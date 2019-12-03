@@ -26,5 +26,15 @@ class UnitTestingLabTests: XCTestCase {
         
         XCTAssertNotNil(data)
     }
+    
+    func testStarWarsMovies() {
+        let filename = "starwars"
+        let ext = "json"
+        let data = Bundle.parseJSONData(filename: filename, ext: ext)
+        
+        let movies = StarWars.getMovies(data: data)
+        
+        XCTAssertGreaterThan(movies.count, 0)
+    }
 
 }

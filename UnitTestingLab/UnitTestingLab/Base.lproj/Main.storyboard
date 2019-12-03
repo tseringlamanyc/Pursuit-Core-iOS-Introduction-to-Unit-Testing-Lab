@@ -243,6 +243,9 @@
                         <viewLayoutGuide key="safeArea" id="IOg-pb-PCr"/>
                     </view>
                     <navigationItem key="navigationItem" id="eFi-I5-vzf"/>
+                    <connections>
+                        <outlet property="tableView" destination="4Xf-12-qxg" id="dXF-wY-ewy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5O-Xt-HCP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

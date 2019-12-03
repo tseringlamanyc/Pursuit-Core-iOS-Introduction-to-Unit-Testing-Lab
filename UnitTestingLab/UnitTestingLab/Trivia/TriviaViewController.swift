@@ -9,12 +9,40 @@
 import UIKit
 
 class TriviaViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var trivia = [Trivia]() {
+        didSet {
+            tableView.reloadData()
+        }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadUrl()
+        tableView.dataSource = self
 
+    }
+    
+    func loadUrl() {
+        trivia = TriviaData.getQuestions(data: Bundle.parseJSONData(filename: "trivia", ext: "json"))
+    }
+    
+}
+
+extension TriviaViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return trivia.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "triviaCell", for: indexPath)
+        let question = trivia[indexPath.row]
+        cell.textLabel?.text = question.question.removingPercentEncoding
+        cell.detailTextLabel?.text = question.difficulty
+        return cell
+    }
 }

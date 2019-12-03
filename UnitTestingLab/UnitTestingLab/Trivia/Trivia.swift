@@ -16,6 +16,7 @@ struct TriviaData: Decodable {
 struct Trivia: Decodable {
     
     let question: String
+    let difficulty: String
 }
 
 extension TriviaData {

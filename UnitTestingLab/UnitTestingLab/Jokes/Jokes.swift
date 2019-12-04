@@ -16,12 +16,14 @@ struct Jokes: Codable {
 }
 
 extension Jokes {
-    static func getJokes(data: Data) -> [Jokes] {
+    static func getJokes() -> [Jokes] {
         var jokes = [Jokes]()
+        
+        let data = Bundle.parseJSONData(filename: "jokes", ext: "json")
         
         do {
             let data = try JSONDecoder().decode([Jokes].self, from: data)
-            jokes = data
+            jokes = data.sorted {$0.id < $1.id}
         } catch {
             fatalError()
         }

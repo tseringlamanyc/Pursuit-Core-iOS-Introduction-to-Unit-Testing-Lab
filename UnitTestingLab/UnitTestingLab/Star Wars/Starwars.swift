@@ -30,12 +30,14 @@ struct Movies: Decodable {
 
 extension StarWars {
     
-    static func getMovies(data: Data) -> [Movies] {
+    static func getMovies() -> [Movies] {
         var movies = [Movies]()
+        
+        let data = Bundle.parseJSONData(filename: "starwars", ext: "json")
         
         do {
             let moviesData = try JSONDecoder().decode(StarWars.self, from: data)
-            movies = moviesData.results
+            movies = moviesData.results.sorted {$0.episode < $1.episode}
         } catch {
             fatalError()
         }

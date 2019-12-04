@@ -25,7 +25,7 @@ class StarWarsViewController: UIViewController {
     }
     
     func loadUrl() {
-        starwars = StarWars.getMovies(data: Bundle.parseJSONData(filename: "starwars", ext: "json"))
+        starwars = StarWars.getMovies()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

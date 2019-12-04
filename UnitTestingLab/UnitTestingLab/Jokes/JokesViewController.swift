@@ -26,7 +26,7 @@ class JokesViewController: UIViewController {
     }
     
     func loadData() {
-        jokes = Jokes.getJokes(data: Bundle.parseJSONData(filename: "jokes", ext: "json"))
+        jokes = Jokes.getJokes()
     }
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -28,12 +28,14 @@ struct Trivia: Decodable {
 
 
 extension TriviaData {
-    static func getQuestions(data: Data) -> [Trivia] {
+    static func getQuestions() -> [Trivia] {
         var trivia = [Trivia]()
+        
+        let data = Bundle.parseJSONData(filename: "trivia", ext: "json")
         
         do {
             let triviaQ = try JSONDecoder().decode(TriviaData.self, from: data)
-            trivia = triviaQ.results
+            trivia = triviaQ.results.sorted {$0.difficulty < $1.difficulty}
         } catch {
             fatalError()
         }

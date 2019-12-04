@@ -27,7 +27,7 @@ class TriviaViewController: UIViewController {
     }
     
     func loadUrl() {
-        trivia = TriviaData.getQuestions(data: Bundle.parseJSONData(filename: "trivia", ext: "json"))
+        trivia = TriviaData.getQuestions()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

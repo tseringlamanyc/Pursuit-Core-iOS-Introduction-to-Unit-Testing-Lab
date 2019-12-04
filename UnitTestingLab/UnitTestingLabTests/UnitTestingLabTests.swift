@@ -28,11 +28,7 @@ class UnitTestingLabTests: XCTestCase {
     }
     
     func testStarWarsMovies() {
-        let filename = "starwars"
-        let ext = "json"
-        let data = Bundle.parseJSONData(filename: filename, ext: ext)
-        
-        let movies = StarWars.getMovies(data: data)
+        let movies = StarWars.getMovies()
         
         XCTAssertGreaterThan(movies.count, 0)
     }
@@ -46,11 +42,7 @@ class UnitTestingLabTests: XCTestCase {
     }
     
     func testTriviaCount() {
-        let filename = "trivia"
-        let ext = "json"
-        let data = Bundle.parseJSONData(filename: filename, ext: ext)
-        
-        let trivia = TriviaData.getQuestions(data: data)
+        let trivia = TriviaData.getQuestions()
         
         XCTAssertGreaterThan(trivia.count, 0)
     }
@@ -64,11 +56,7 @@ class UnitTestingLabTests: XCTestCase {
     }
     
     func testJokesCount() {
-        let filename = "jokes"
-        let ext = "json"
-        let data = Bundle.parseJSONData(filename: filename, ext: ext)
-        
-        let jokes = Jokes.getJokes(data: data)
+        let jokes = Jokes.getJokes()
         
         XCTAssertGreaterThan(jokes.count, 0)
     }

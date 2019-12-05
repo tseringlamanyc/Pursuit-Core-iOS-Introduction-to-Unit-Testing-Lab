@@ -24,7 +24,7 @@ class DetailTriviaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
-        checkAnswer()
+        loadButtons()
 
     }
     
@@ -32,22 +32,28 @@ class DetailTriviaViewController: UIViewController {
         questionLabel.text = answer.question.removingPercentEncoding
         allChoices.append(answer.correctAnswer.removingPercentEncoding ?? "")
         allChoices.append(answer.incorrectAnswer[0].removingPercentEncoding ?? "")
-        allChoices.append(answer.incorrectAnswer[1].removingPercentEncoding ?? "")
-        allChoices.append(answer.incorrectAnswer[2].removingPercentEncoding ?? "")
+        if answer.incorrectAnswer.count > 1 {
+            allChoices.append(answer.incorrectAnswer[1].removingPercentEncoding ?? "")
+            allChoices.append(answer.incorrectAnswer[2].removingPercentEncoding ?? "")
+        }
+      
     }
     
-    func checkAnswer() {
+    func loadButtons() {
+        allChoices.shuffle()
         if allChoices.count == 2 {
             button1.setTitle(allChoices[0], for: .normal)
             button2.setTitle(allChoices[1], for: .normal)
+            button3.setTitle("", for: .normal)
+            button4.setTitle("", for: .normal)
             button3.isEnabled = false
-            button3.isEnabled = false
+            button4.isEnabled = false
         }
-            if allChoices.count > 2 {
+            if allChoices.count == 4 {
             button1.setTitle(allChoices[0], for: .normal)
             button2.setTitle(allChoices[1], for: .normal)
-            button1.setTitle(allChoices[2], for: .normal)
-            button2.setTitle(allChoices[3], for: .normal)
+            button3.setTitle(allChoices[2], for: .normal)
+            button4.setTitle(allChoices[3], for: .normal)
         }
         
     }

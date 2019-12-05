@@ -23,7 +23,6 @@ class DetailTriviaViewController: UIViewController {
     var answer: Trivia!
     var allChoices = [String]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -72,8 +71,8 @@ class DetailTriviaViewController: UIViewController {
         if sender.titleLabel?.text == correctChoice {
             view.backgroundColor = .green
             responseLabel.text = "Good Job"
-            replay.isEnabled = true
-            replay.setTitle("Try Another Question", for: .normal)
+            replay.isEnabled = false
+            replay.setTitle("", for: .normal)
         } else {
             view.backgroundColor = .red
             responseLabel.text = "Press button below to try again"
@@ -84,7 +83,6 @@ class DetailTriviaViewController: UIViewController {
     
     @IBAction func replayPressed(_ sender: UIButton) {
         initialView()
-        loadData()
         loadButtons()
         view.backgroundColor = .white
     }

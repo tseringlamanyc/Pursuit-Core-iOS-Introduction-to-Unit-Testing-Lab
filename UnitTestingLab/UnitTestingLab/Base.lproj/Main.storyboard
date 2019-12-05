@@ -322,14 +322,24 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkC-3F-T9M">
-                                <rect key="frame" x="20" y="480.5" width="374" height="21"/>
+                                <rect key="frame" x="20" y="398.5" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQj-76-Hs2">
+                                <rect key="frame" x="20" y="477" width="374" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="replayPressed:" destination="tsS-kU-gdW" eventType="touchUpInside" id="3RD-Ot-siB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="CpS-wh-Zeg" firstAttribute="trailing" secondItem="rkC-3F-T9M" secondAttribute="trailing" constant="20" id="130-gD-tAD"/>
                             <constraint firstItem="CpS-wh-Zeg" firstAttribute="trailing" secondItem="hoH-Jp-ILB" secondAttribute="trailing" constant="20" id="1bi-ug-K0D"/>
                             <constraint firstItem="WJz-rl-dJ8" firstAttribute="top" secondItem="hoH-Jp-ILB" secondAttribute="bottom" constant="20" id="23F-j9-IUK"/>
                             <constraint firstItem="WJz-rl-dJ8" firstAttribute="leading" secondItem="CpS-wh-Zeg" secondAttribute="leading" constant="20" id="9Xq-7e-aEz"/>
@@ -339,15 +349,17 @@
                             <constraint firstItem="b28-v4-0pf" firstAttribute="top" secondItem="WRv-1J-OTm" secondAttribute="bottom" constant="20" id="NtB-yC-ZZi"/>
                             <constraint firstItem="yGq-N3-eRB" firstAttribute="leading" secondItem="CpS-wh-Zeg" secondAttribute="leading" constant="20" id="Pdi-jy-kb9"/>
                             <constraint firstItem="CpS-wh-Zeg" firstAttribute="trailing" secondItem="b28-v4-0pf" secondAttribute="trailing" constant="20" id="TOk-Vq-Raf"/>
+                            <constraint firstItem="CpS-wh-Zeg" firstAttribute="trailing" secondItem="SQj-76-Hs2" secondAttribute="trailing" constant="20" id="Tni-Lz-cab"/>
                             <constraint firstItem="b28-v4-0pf" firstAttribute="leading" secondItem="CpS-wh-Zeg" secondAttribute="leading" constant="20" id="V4R-Or-NoH"/>
+                            <constraint firstItem="SQj-76-Hs2" firstAttribute="top" secondItem="rkC-3F-T9M" secondAttribute="bottom" constant="57.5" id="aXG-aF-rOk"/>
                             <constraint firstItem="hoH-Jp-ILB" firstAttribute="top" secondItem="b28-v4-0pf" secondAttribute="bottom" constant="20" id="c47-fm-9ni"/>
-                            <constraint firstItem="rkC-3F-T9M" firstAttribute="leading" secondItem="CpS-wh-Zeg" secondAttribute="leading" constant="20" id="huO-HE-65P"/>
+                            <constraint firstItem="rkC-3F-T9M" firstAttribute="top" secondItem="WJz-rl-dJ8" secondAttribute="bottom" constant="50" id="fAW-zp-5cG"/>
+                            <constraint firstItem="rkC-3F-T9M" firstAttribute="leading" secondItem="CpS-wh-Zeg" secondAttribute="leading" constant="20" id="ohT-eV-8du"/>
                             <constraint firstItem="yGq-N3-eRB" firstAttribute="top" secondItem="CpS-wh-Zeg" secondAttribute="top" constant="30" id="pAr-Vq-9oo"/>
-                            <constraint firstItem="CpS-wh-Zeg" firstAttribute="trailing" secondItem="rkC-3F-T9M" secondAttribute="trailing" constant="20" id="qMh-zh-Hib"/>
                             <constraint firstItem="CpS-wh-Zeg" firstAttribute="trailing" secondItem="yGq-N3-eRB" secondAttribute="trailing" constant="20" id="qYL-LQ-AEB"/>
                             <constraint firstItem="hoH-Jp-ILB" firstAttribute="leading" secondItem="CpS-wh-Zeg" secondAttribute="leading" constant="20" id="rTT-SV-Ac7"/>
                             <constraint firstItem="WRv-1J-OTm" firstAttribute="top" secondItem="yGq-N3-eRB" secondAttribute="bottom" constant="30" id="sjB-dr-x30"/>
-                            <constraint firstItem="rkC-3F-T9M" firstAttribute="top" secondItem="WJz-rl-dJ8" secondAttribute="bottom" constant="132" id="uV5-eu-0up"/>
+                            <constraint firstItem="SQj-76-Hs2" firstAttribute="leading" secondItem="CpS-wh-Zeg" secondAttribute="leading" constant="20" id="ylA-uf-pAl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CpS-wh-Zeg"/>
                     </view>
@@ -358,6 +370,7 @@
                         <outlet property="button3" destination="hoH-Jp-ILB" id="h06-dz-yzr"/>
                         <outlet property="button4" destination="WJz-rl-dJ8" id="AOn-yk-5fE"/>
                         <outlet property="questionLabel" destination="yGq-N3-eRB" id="CSs-KD-Ori"/>
+                        <outlet property="replay" destination="SQj-76-Hs2" id="o0m-Z5-kln"/>
                         <outlet property="responseLabel" destination="rkC-3F-T9M" id="f8n-xR-nV6"/>
                         <outletCollection property="allButtons" destination="WRv-1J-OTm" collectionClass="NSMutableArray" id="W1M-Mh-gWr"/>
                         <outletCollection property="allButtons" destination="b28-v4-0pf" collectionClass="NSMutableArray" id="FjX-QZ-Hhx"/>

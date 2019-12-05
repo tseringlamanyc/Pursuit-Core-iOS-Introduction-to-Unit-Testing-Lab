@@ -18,17 +18,18 @@ class DetailTriviaViewController: UIViewController {
     @IBOutlet weak var button4: UIButton!
     @IBOutlet var allButtons: [UIButton]!
     @IBOutlet weak var responseLabel: UILabel!
-    
-    
+    @IBOutlet weak var replay: UIButton!
     
     var answer: Trivia!
     var allChoices = [String]()
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
         loadButtons()
-
+        initialView()
+        
     }
     
     func loadData() {
@@ -39,7 +40,7 @@ class DetailTriviaViewController: UIViewController {
             allChoices.append(answer.incorrectAnswer[1].removingPercentEncoding ?? "")
             allChoices.append(answer.incorrectAnswer[2].removingPercentEncoding ?? "")
         }
-      
+        
     }
     
     func loadButtons() {
@@ -52,7 +53,7 @@ class DetailTriviaViewController: UIViewController {
             button3.isEnabled = false
             button4.isEnabled = false
         }
-            if allChoices.count == 4 {
+        if allChoices.count == 4 {
             button1.setTitle(allChoices[0], for: .normal)
             button2.setTitle(allChoices[1], for: .normal)
             button3.setTitle(allChoices[2], for: .normal)
@@ -60,16 +61,31 @@ class DetailTriviaViewController: UIViewController {
         }
     }
     
+    func initialView () {
+        replay.isEnabled = false
+        replay.setTitle("", for: .normal)
+        responseLabel.text = ""
+    }
+    
     @IBAction func buttonPressed(_ sender: UIButton) {
         let correctChoice = answer.correctAnswer
         if sender.titleLabel?.text == correctChoice {
-                view.backgroundColor = .green
-                responseLabel.text = "Good Job"
-            } else {
-                view.backgroundColor = .red
-                responseLabel.text = "Try again"
-            }
-        
+            view.backgroundColor = .green
+            responseLabel.text = "Good Job"
+            replay.isEnabled = true
+            replay.setTitle("Try Another Question", for: .normal)
+        } else {
+            view.backgroundColor = .red
+            responseLabel.text = "Press button below to try again"
+            replay.isEnabled = true
+            replay.setTitle("Try Again", for: .normal)
+        }
     }
-
+    
+    @IBAction func replayPressed(_ sender: UIButton) {
+        initialView()
+        loadData()
+        loadButtons()
+        view.backgroundColor = .white
+    }
 }

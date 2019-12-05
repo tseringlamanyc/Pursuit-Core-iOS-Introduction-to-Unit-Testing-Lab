@@ -18,11 +18,13 @@ struct Trivia: Decodable {
     let question: String
     let difficulty: String
     let correctAnswer: String
+    let incorrectAnswer: [String]
     
     enum CodingKeys: String, CodingKey {
         case question
         case difficulty
         case correctAnswer = "correct_answer"
+        case incorrectAnswer = "incorrect_answers"
     }
 }
 
@@ -37,7 +39,7 @@ extension TriviaData {
             let triviaQ = try JSONDecoder().decode(TriviaData.self, from: data)
             trivia = triviaQ.results.sorted {$0.difficulty < $1.difficulty}
         } catch {
-            fatalError()
+            fatalError("\(error)")
         }
         return trivia
     }

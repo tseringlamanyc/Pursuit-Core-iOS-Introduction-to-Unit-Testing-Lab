@@ -23,6 +23,7 @@ class TriviaViewController: UIViewController {
         super.viewDidLoad()
         loadUrl()
         tableView.dataSource = self
+        tableView.delegate = self
 
     }
     
@@ -38,7 +39,7 @@ class TriviaViewController: UIViewController {
     }
 }
 
-extension TriviaViewController: UITableViewDataSource {
+extension TriviaViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return trivia.count
@@ -51,4 +52,5 @@ extension TriviaViewController: UITableViewDataSource {
         cell.detailTextLabel?.text = question.difficulty
         return cell
     }
+    
 }

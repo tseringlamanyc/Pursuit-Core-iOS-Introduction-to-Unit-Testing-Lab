@@ -279,30 +279,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGq-N3-eRB">
-                                <rect key="frame" x="20" y="118" width="374" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGq-N3-eRB">
+                                <rect key="frame" x="20" y="118" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRv-1J-OTm">
-                                <rect key="frame" x="20" y="169" width="374" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="20" y="168.5" width="374" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="tsS-kU-gdW" eventType="touchUpInside" id="AzQ-A6-aLb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b28-v4-0pf">
-                                <rect key="frame" x="20" y="219" width="374" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="20" y="218.5" width="374" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="tsS-kU-gdW" eventType="touchUpInside" id="Zpf-E0-20s"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoH-Jp-ILB">
-                                <rect key="frame" x="20" y="269" width="374" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="20" y="268.5" width="374" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="tsS-kU-gdW" eventType="touchUpInside" id="siY-dj-qag"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJz-rl-dJ8">
-                                <rect key="frame" x="20" y="319" width="374" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="20" y="318.5" width="374" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="tsS-kU-gdW" eventType="touchUpInside" id="4AA-vC-sqU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkC-3F-T9M">
-                                <rect key="frame" x="20" y="481" width="374" height="21"/>
+                                <rect key="frame" x="20" y="480.5" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -339,6 +359,10 @@
                         <outlet property="button4" destination="WJz-rl-dJ8" id="AOn-yk-5fE"/>
                         <outlet property="questionLabel" destination="yGq-N3-eRB" id="CSs-KD-Ori"/>
                         <outlet property="responseLabel" destination="rkC-3F-T9M" id="f8n-xR-nV6"/>
+                        <outletCollection property="allButtons" destination="WRv-1J-OTm" collectionClass="NSMutableArray" id="W1M-Mh-gWr"/>
+                        <outletCollection property="allButtons" destination="b28-v4-0pf" collectionClass="NSMutableArray" id="FjX-QZ-Hhx"/>
+                        <outletCollection property="allButtons" destination="hoH-Jp-ILB" collectionClass="NSMutableArray" id="fXv-Co-Mo6"/>
+                        <outletCollection property="allButtons" destination="WJz-rl-dJ8" collectionClass="NSMutableArray" id="X6V-TJ-csf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZlX-xM-p5P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

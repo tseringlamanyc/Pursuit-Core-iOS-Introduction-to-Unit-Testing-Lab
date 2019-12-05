@@ -16,7 +16,10 @@ class DetailTriviaViewController: UIViewController {
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var button4: UIButton!
+    @IBOutlet var allButtons: [UIButton]!
     @IBOutlet weak var responseLabel: UILabel!
+    
+    
     
     var answer: Trivia!
     var allChoices = [String]()
@@ -55,8 +58,18 @@ class DetailTriviaViewController: UIViewController {
             button3.setTitle(allChoices[2], for: .normal)
             button4.setTitle(allChoices[3], for: .normal)
         }
+    }
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        let correctChoice = answer.correctAnswer
+        if sender.titleLabel?.text == correctChoice {
+                view.backgroundColor = .green
+                responseLabel.text = "Good Job"
+            } else {
+                view.backgroundColor = .red
+                responseLabel.text = "Try again"
+            }
         
     }
-   
 
 }
